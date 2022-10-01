@@ -1,7 +1,9 @@
 from src.set_manager import LegoManager
 
 def main():
-    LegoManager('F:\\Lego\\').search_csv_files()
+    manager = LegoManager('F:\\Lego\\')
+    manager.read_data()
+    manager.print_goallist()
 
 if __name__ == '__main__':
     main()

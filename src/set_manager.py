@@ -1,8 +1,6 @@
 import glob
 from typing import Iterator
-import pandas as pd
-
-from set_reader import Brickset
+from .set_reader import Brickset
 
 class MergedList():
     def __init__(self, goallist:list, datalist:list):
@@ -22,7 +20,6 @@ class MergedList():
             if found == False:
                 self.goallist.append(new_item)
         return self.goallist
-
 
 
 class LegoManager():
@@ -54,11 +51,3 @@ class LegoManager():
     def sort_goallist(self):
         self.bricksetGoal = sorted(self.bricksetGoal, key=lambda k: k['PartID']) 
     
-def main():
-    manager = LegoManager('F:\\Lego\\')
-    manager.read_data()
-    manager.print_goallist()
-
-
-if __name__ == '__main__':
-    main()
