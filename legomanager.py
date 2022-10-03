@@ -10,7 +10,7 @@ def path_to_image_html(path):
 
 def create_html_table(bricks):
     bricks_table = pd.DataFrame.from_records(bricks)
-    html = bricks_table.to_html(escape=False ,formatters=dict(image=path_to_image_html))
+    html = bricks_table.to_html(escape=False ,formatters=dict(image=path_to_image_html),justify="justify-all")
     html = "<html>"+ html + "</html>"
     return html
 

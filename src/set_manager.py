@@ -14,7 +14,7 @@ class MergedList():
                 if item['PartID'] == new_item['PartID']:
                     found = True
                     if item['Quantity'] < new_item['Quantity']:         
-                        # Add the big value
+                        # Update the big value
                         item['Quantity'] = new_item['Quantity']
             # Add a new item            
             if found == False:
