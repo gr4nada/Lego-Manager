@@ -48,6 +48,9 @@ class LegoManager():
     def print_goallist(self):
         print(self.bricksetGoal)
 
+    def get_bricksetGoal(self):
+        return self.bricksetGoal
+
     def sort_goallist(self):
-        self.bricksetGoal = sorted(self.bricksetGoal, key=lambda k: k['PartID']) 
+        self.bricksetGoal = sorted(self.bricksetGoal, key=lambda k: k['PartName']) 
     

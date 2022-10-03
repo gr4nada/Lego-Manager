@@ -29,6 +29,6 @@ class Brickset(object):
         Returns:
             dict: brickSet [{PartId:XX, Quantity:XX},...]
         """
-        brickset = pd.DataFrame(self.table, columns = ['PartID','Quantity'])
+        brickset = pd.DataFrame(self.table, columns = ['PartID','Quantity','PartName'])
         return brickset.to_dict('records')
 
